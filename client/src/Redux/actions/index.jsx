@@ -12,7 +12,7 @@ export const GET_PUNTAJE = "GET_PUNTAJE"
 
 export function getRecipes() {
   return async function(dispatch){
-    let json= await axios.get(`/recipes`);
+    let json= await axios.get(`https://pi-food-back.herokuapp.com/recipes`);
     return dispatch({
       type:GET_RECIPES,
       payload : json.data
@@ -22,7 +22,7 @@ export function getRecipes() {
 
 export function getRecipesId(id) {
   return async function(dispatch){
-    let json=await axios.get(`/recipes/${id}`)
+    let json=await axios.get(`https://pi-food-back.herokuapp.com/recipes/${id}`)
     return dispatch({
       type : GET_DETAILS,
       payload : json.data
@@ -51,7 +51,7 @@ export function getDiets (){
 export function getRecipesByName(name){
   return async function (dispatch){
     try{
-      let json=await axios.get(`/recipes?name=${name}`)
+      let json=await axios.get(`https://pi-food-back.herokuapp.com/recipes?name=${name}`)
       return dispatch({
         type:GET_RECIPES_NAME,
         payload : json.data 

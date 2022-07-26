@@ -92,7 +92,7 @@ const [errors,setErrors] = useState({})
       ) {
          alert("Recipes not Created - please complete the inputs");
       } else {
-        await axios.post("http://localhost:3001/recipes", input)
+        await axios.post("https://pi-food-back.herokuapp.com/recipes", input)
          alert("Recipes created")
     history.push("/recipes")
   }}

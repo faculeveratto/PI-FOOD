@@ -14,7 +14,7 @@ const Details = () => {
     //const recipesId = useSelector(state => state.recipesId);
     
     useEffect ( ()=> { // ejecuta nuesta action en conjunto con el useDispach 
-      axios (`http://localhost:3001/recipes/${id}`) 
+      axios (`https://pi-food-back.herokuapp.com/recipes/${id}`) 
       .then (response =>{
            setRecipe (response.data)
       }) // despacha la accion
